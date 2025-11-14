@@ -1,7 +1,7 @@
 {
-    "name": "",
-    "url": "",
-    "showName": "",
+    "name": "testAPP",
+    "url": "http://172.16.1.150:9150/",
+    "showName": "testAPP",
     "appid": "",
     "icon": "",
     "iconRound": true,

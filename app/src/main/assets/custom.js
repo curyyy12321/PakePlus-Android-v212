@@ -24,3 +24,11 @@ window.open = function (url, target, features) {
 }
 
 document.addEventListener('click', hookClick, { capture: true })
+
+// 进入页面时先 push 一次，避免浏览器历史栈为空
+window.history.pushState(null, "", window.location.href);
+
+window.addEventListener("popstate", function (event) {
+  // 每次试图后退时，再 push 回去，阻止真正返回
+  window.history.pushState(null, "", window.location.href);
+});
